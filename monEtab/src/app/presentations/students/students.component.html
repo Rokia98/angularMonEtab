@@ -1,0 +1,196 @@
+<body>
+  <div class="main-container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="logo" style="display: flex; align-items: center;">
+        <img src="logo.png" alt="Logo" style="width: 50px; height: 50px; margin-right: 8px;">
+        <h2>Mon Etab</h2>
+      </div>
+      <hr style="background-color: #575757;">
+      <ul style="height: 420px;">
+        <li><a href="dashbord"><i class="fas fa-tachometer-alt"></i> Tableau de Bord</a></li>
+        <li><a href="students"><i class="fas fa-user-graduate"></i> Éleve</a></li>
+        <li><a href="teachers"><i class="fas fa-chalkboard-teacher"></i> Professeurs</a></li>
+        <li><a href="users"><i class="fas fa-user-graduate"></i> Utilisateurs</a></li>
+        <li><a href="rapport"><i class="fas fa-id-badge"></i> Rapport</a></li>
+      </ul>
+      <hr>
+      <ul>
+        <li><a href="login"><i class="fa fa-sign-out" aria-hidden="true"></i> Déconnexion</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+      <div class="header">
+        <h1>Élèves (2)</h1>
+        <a href="ajouter-eleve" class="add-student">+ Nouvel élève</a>
+      </div>
+      <div class="table-container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Nom</th>
+              <th>Prénom</th>
+              <th>Vacant</th>
+              <th>Classe</th>
+              <th>Matricule</th>
+              <th>Âge</th>
+              <th>Téléphone</th>
+              <th>Ville</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>KOFFI</td>
+              <td>George</td>
+              <td>Oui</td>
+              <td>Tle</td>
+              <td>GDJ7GDGD</td>
+              <td>25</td>
+              <td>0123456789</td>
+              <td>Bonoua</td>
+              <td>
+                <button class="edit-button">Modifier</button>
+                <button class="delete-button">Supprimer</button>
+              </td>
+            </tr>
+            <tr>
+              <td>KONÉ</td>
+              <td>Sali</td>
+              <td>Non</td>
+              <td>2nd</td>
+              <td>GDJ7GDGD</td>
+              <td>22</td>
+              <td>0123456789</td>
+              <td>Abidjan</td>
+              <td>
+                <button class="edit-button">Modifier</button>
+                <button class="delete-button">Supprimer</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+<style>
+  * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.main-container {
+  display: flex;
+  width: 100%;
+  height: 90vh;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.sidebar h2 {
+text-align: center;
+margin-bottom: 30px;
+}
+
+
+.sidebar ul {
+list-style-type: none;
+padding: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: #cccccc;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.sidebar ul li a:hover {
+  color: #ffffff;
+}
+
+.content {
+  flex: 1;
+  padding: 40px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 1.5em;
+}
+
+.add-student {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.table-container {
+  overflow-x: auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.edit-button {
+  background-color: #ffc107;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+</style>

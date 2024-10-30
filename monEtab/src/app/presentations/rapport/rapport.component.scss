@@ -1,0 +1,130 @@
+body{
+    display: flex;
+    /* justify-content: center; Centrage horizontal */
+    /* align-items: center; Centrage vertical */
+    height: 100vh; /* Hauteur du viewport */
+    margin: 0;
+    background-color: #f8f9fa;
+}
+.sidebar {
+width: 250px;
+background: #b6adad;
+color:#0c0c0c;
+padding: 15px;
+position: fixed;
+height: 100%;
+}
+
+.sidebar h2 {
+text-align: center;
+margin-bottom: 30px;
+}
+
+.sidebar ul {
+list-style-type: none;
+padding: 0;
+}
+
+.sidebar ul li {
+margin: 20px 0;
+}
+
+.sidebar ul li a {
+color: #070707;
+text-decoration: none;
+font-size: 18px;
+display: block;
+}
+
+.sidebar ul li a:hover {
+color: #5833dd;
+padding-left: 10px;
+transition: 0.3s;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-left: 300px;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Form styling */
+form {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    margin-top: 50px;
+    margin-left: 500px;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Form group right styling */
+.form-group-right {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Select box styling */
+select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #0c0c0c;
+    border-radius: 8px;
+    background-color: #ffffff;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Button container */
+.btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.annuler {
+    background-color: #dc3545;
+    color: white;
+}
+
+button.inscrire {
+    background-color: #28a745;
+    color: white;
+}
+
+/* Button hover effect */
+button:hover {
+    opacity: 0.9;
+}
+
+/* Responsive styling */
+@media (max-width: 576px) {
+    .btn {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    button:last-child {
+        margin-bottom: 0;
+    }
+}

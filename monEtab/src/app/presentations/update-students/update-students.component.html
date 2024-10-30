@@ -1,0 +1,143 @@
+
+<div class="sidebar">
+    <div class="logo" style="display: flex;">
+        <img src="logo.png" alt="" style="width: 50px; height: 50px;">
+        <h2>Mon Etab</h2>
+    </div>
+    
+    <hr style="background-color: #575757;">
+    <ul style="height: 420px;">
+        <li><a href="dashbord"><i class="fas fa-tachometer-alt"></i> Tableau de Bord</a></li>
+        <li><a href="students"><i class="fas fa-user-graduate"></i> Éleve</a></li>
+        <li><a href="teachers"><i class="fas fa-chalkboard-teacher"></i> Professeurs</a></li>
+        <li><a href="users"><i class="fas fa-user-graduate"></i> Utilisateurs</a></li>
+        <li><a href="rapport"><i class="fas fa-id-badge"></i> Rapport</a></li>
+        
+        
+    </ul>
+    <hr>
+    <ul>
+        <li><a href="login"><i class="fa fa-sign-out" aria-hidden="true"></i> deconnexion</a></li>
+    </ul>
+    
+</div>
+
+<div class="container">
+    <form [formGroup]="formUpdateStudent">
+      <h1>Ajouter un Élève</h1>
+  
+      <!-- Champ Prénom -->
+      <div class="form-group">
+        <label for="firstName" class="form-label">Prénom</label>
+        <input 
+          type="text" 
+          formControlName="firstName" 
+          class="form-control" 
+          id="firstName" 
+          placeholder="Nom de l'élève" 
+          [class.is-invalid]="IsInvalidInput(formUpdateStudent.controls['first_name'])"
+        >
+      </div>
+  
+      <!-- Champ Nom -->
+      <div class="form-group">
+        <label for="lastname" class="form-label">Nom</label>
+        <input 
+          type="text" 
+          id="lastname" 
+          formControlName="lastname" 
+          class="form-control" 
+          placeholder="Nom de famille de l'élève"
+        >
+      </div>
+  
+      <!-- Champ Genre -->
+      <div class="form-group">
+        <label for="gender" class="form-label">Genre</label>
+        <select 
+          id="gender" 
+          formControlName="gender" 
+          class="form-select" 
+          style="width: 100%;"
+        >
+          <option value="" disabled selected>Genre</option>
+          <option value="femme">Femme</option>
+          <option value="homme">Homme</option>
+        </select>
+      </div>
+  
+      <!-- Champ Matricule -->
+      <div class="form-group">
+        <label for="matricule" class="form-label">Matricule</label>
+        <input 
+          type="text" 
+          id="matricule" 
+          formControlName="matricule" 
+          class="form-control" 
+          placeholder="Matricule de l'élève"
+        >
+      </div>
+  
+      <!-- Champ Date de Naissance -->
+      <div class="form-group">
+        <label for="date" class="form-label">Date de Naissance</label>
+        <input 
+          type="date" 
+          id="date" 
+          formControlName="date" 
+          class="form-control"
+        >
+      </div>
+  
+      <!-- Champ Classe -->
+      <div class="form-group">
+        <label for="classe" class="form-label">Classe</label>
+        <select 
+          id="classe" 
+          formControlName="classe" 
+          class="form-select" 
+          style="width: 100%; max-width: 300px; border: 3.5px solid #0c0c0c; padding: 10px; border-radius: 4px;"
+        >
+          <option value="" disabled selected>Sélectionner la classe</option>
+          <option value="Tle">Terminale</option>
+          <option value="1ere">Première</option>
+          <option value="2nde">Seconde</option>
+          <option value="3eme">Troisième</option>
+          <option value="4eme">Quatrième</option>
+          <option value="5eme">Cinquième</option>
+          <option value="6eme">Sixième</option>
+        </select>
+      </div>
+  
+      <!-- Champ Numéro de Téléphone -->
+      <div class="form-group">
+        <label for="number" class="form-label">Numéro de Téléphone</label>
+        <input 
+          type="text" 
+          id="number" 
+          formControlName="number" 
+          class="form-control" 
+          placeholder="0123456789"
+        >
+      </div>
+  
+      <!-- Champ Ville -->
+      <div class="form-group">
+        <label for="city" class="form-label">Ville</label>
+        <input 
+          type="text" 
+          id="city" 
+          formControlName="city" 
+          class="form-control" 
+          placeholder="Ville de l'élève"
+        >
+      </div>
+  
+      <!-- Boutons d'action -->
+      <div class="form-group mt-3">
+        <button type="button" class="btn btn-secondary">Annuler</button>
+        <button type="submit" class="btn btn-primary" [disabled]="formUpdateStudent.invalid">Enregistrer</button>
+      </div>
+    </form>
+  </div>
+  
